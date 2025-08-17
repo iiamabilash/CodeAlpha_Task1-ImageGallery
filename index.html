@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Image Gallery</h1>
+    <div class="top-controls">
+      <div class="filter-tags" id="filterButtons"></div>
+      <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Theme</button>
+    </div>
+  </header>
+
+  <section class="gallery" id="galleryContainer"></section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" onclick="closeLightbox()">×</span>
+    <button class="lightbox-prev" onclick="changeImage(-1)">❮</button>
+    <img id="lightboxImage" src="" alt="">
+    <button class="lightbox-next" onclick="changeImage(1)">❯</button>
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
